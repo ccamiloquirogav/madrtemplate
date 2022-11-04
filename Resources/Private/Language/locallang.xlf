@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-04-23T10:22:00Z" product-name="madrtemplate">
+		<header/>
+		<body>
+			<trans-unit id="tx_madrtemplate_legalregime">
+				<source>Legal regime</source>
+			</trans-unit>
+			<trans-unit id="tx_madrtemplate_humantalent">
+				<source>Human talent</source>
+			</trans-unit>
+			<trans-unit id="tx_madrtemplate_booking">
+				<source>Booking</source>
+			</trans-unit>
+			<trans-unit id="tx_madrtemplate_jobofferings">
+				<source>Job offerings</source>
+			</trans-unit>
+			<trans-unit id="tx_madrtemplate_accountability">
+				<source>Accountability</source>
+			</trans-unit>
+			<trans-unit id="tx_madrtemplate_teachingcontest">
+				<source>Teaching contest</source>
+			</trans-unit>
+			<trans-unit id="tx_madrtemplate_virtualpayment">
+				<source>Virtual payment</source>
+			</trans-unit>
+			<trans-unit id="tx_madrtemplate_internalcontrolling">
+				<source>Internal controlling</source>
+			</trans-unit>
+			<trans-unit id="tx_madrtemplate_quality">
+				<source>Quality</source>
+			</trans-unit>
+			<trans-unit id="tx_madrtemplate_notificationsmailbox">
+				<source>Notification's mailbox</source>
+			</trans-unit>
+			<trans-unit id="tx_madrtemplate_institutionalemail">
+				<source>Institutional E-mail</source>
+			</trans-unit>
+			<trans-unit id="tx_madrtemplate_sitemap">
+				<source>Sitemap</source>
+			</trans-unit>
+			<trans-unit id="tx_madrtemplate_socialnetworks">
+				<source>Social networks</source>
+			</trans-unit>
+			<trans-unit id="tx_madrtemplate_faq">
+				<source>FAQ</source>
+			</trans-unit>
+			<trans-unit id="tx_madrtemplate_claimsandsuggestions">
+				<source>Claims and suggestions</source>
+			</trans-unit>
+			<trans-unit id="tx_madrtemplate_onlineattentionservices">
+				<source>Online attention services</source>
+			</trans-unit>
+			<trans-unit id="tx_madrtemplate_survey">
+				<source>Survey</source>
+			</trans-unit>
+			<trans-unit id="tx_madrtemplate_contact">
+				<source>Contact</source>
+			</trans-unit>
+			<trans-unit id="tx_madrtemplate_statistics">
+				<source>Statistics</source>
+			</trans-unit>
+			<trans-unit id="tx_madrtemplate_glossary">
+				<source>Glossary</source>
+			</trans-unit>
+			<trans-unit id="tx_madrtemplate_webpagecontact">
+				<source>Web page contact</source>
+			</trans-unit>
+			<trans-unit id="tx_madrtemplate_somerightsreserved">
+				<source>Some rights reserved</source>
+			</trans-unit>
+			<trans-unit id="tx_madrtemplate_webmastercontact">
+				<source>Contact the webmaster</source>
+			</trans-unit>
+			<trans-unit id="tx_madrtemplate_aboutthiswebsite">
+				<source>About this website</source>
+			</trans-unit>
+			<trans-unit id="tx_madrtemplate_lastupdate">
+				<source>Last update</source>
+			</trans-unit>			
+		</body>
+	</file>
+</xliff>

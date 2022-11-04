@@ -1,0 +1,19 @@
+{
+    "name": "madr/template",
+    "type": "typo3-cms-extension",
+    "description": "Plantilla institucional predeterminada para el sitio web de Ministerio de Agricultura y Desarrollo Rural de Colombia",
+    "license": "GPL-2.0-or-later",
+    "require": {
+      "typo3/cms-core": "^10.4 || ^11.0"
+    },
+    "autoload": {
+      "psr-4": {
+         "Madr\\Template\\": "Classes/"
+      }
+    },
+    "extra": {
+      "typo3/cms": {
+         "extension-key": "madrtemplate"
+      }
+    }
+}

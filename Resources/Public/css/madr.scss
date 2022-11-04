@@ -1,0 +1,114 @@
+$color_blue_dark : #004884; // rgba(0, 72, 132, 1) .govcolor-blue-dark
+$color_marine : #3366CC; //rgb(51, 102, 204) govcolor-marine
+$color_blue_light : #E6EFFD; //rgba(230, 239, 253, 1) govcolor-blue-light
+$color_black : #000000; //rgba(0, 0, 0, 1) govcolor-black
+$color_tundora : #4B4B4B; //rgba(75, 75, 75, 1) govcolor-tundora
+$color_dim_gray : #737373; //rgba(115, 115, 115, 1) govcolor-dim-gray
+$color_silver : #BABABA; //rgba(186, 186, 186, 1) govcolor-silver
+$color_concrete : #F2F2F2; //rgba(242, 242, 242, 1) govcolor-concrete
+$color_hawkes_blue : #F6F8F9; //rgba(246, 248, 249, 1) govcolor-hawkes-blue
+$color_white : #ffffff; //rgba(255, 255, 255, 1) govcolor-white
+$color_radical_red : #F42F63; //rgba(244, 47, 99, 1) govcolor-radical-red
+$color_shiraz : #A80521; //rgba(168, 5, 33, 1) govcolor-shiraz
+$color_orange : #F3561F; //rgba(243, 86, 31, 1) govcolor-orange
+$color_gold : #FFAB00; //rgba(255, 171, 0, 1) govcolor-gold
+$color_elf_green : #068460; //rgba(6, 132, 96, 1) govcolor-elf-Green
+
+/**/
+// @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Unica+One&display=swap');
+
+/* Fuente iconografica */
+@font-face {
+  font-family: "govco-font";
+  src: url("../fonts/govco-fontv2.eot") format("truetype"),
+  url("../fonts/govco-fontv2.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*General*/
+// body{ font-family: 'Lato', sans-serif; }
+a{ text-decoration: none; }
+body{ font-size: 13px; }
+h1{ font-size: 24px;}
+h2{ font-size: 22px;}
+h3{ font-size: 20px;}
+h4{ font-size: 18px;}
+h5{ font-size: 16px;}
+
+/*Header*/
+.cnt_footer,
+.cnt_header{ background-color: $color_marine; }
+.img_logo_gov img{
+  // height: 1.875rem;
+  // width: 8.5rem;
+  height: 1.5rem;
+  width: 6.8rem;
+}
+.cnt_header a{
+  align-items: center;
+  display: flex;
+  height: 100%;
+}
+.cnt_header span{ font-weight: bold; }
+/*Footer*/
+.cnt_footer{
+  color: $color_white;
+}
+.cnt_footer .navbar{ justify-content: space-between!important;}
+.info_footer a{
+  border-bottom: 1px solid;
+  padding-bottom: 2px;
+}
+.cnt_footer a{ color: #ffffff; }
+// .img_logo_gov
+.barra-superior-govco a {
+    content: url(https://cdn.www.gov.co/assets/images/logo.svg);
+    height: 1.875rem;
+    width: 8.5rem;
+}
+.lnk_gov{ font-weight: 200; }
+.lnk_gov span{ font-weight: 700; }
+.icon_social{ padding-right: 25px; }
+.icon_social img{
+  height: 30px;
+  width: 30px;
+}
+.icon_social span{
+  font-size: 10pt;
+  padding-left: 5px;
+  text-transform: uppercase;
+}
+.icon_social{
+  @media (max-width: 768px) {
+    display: flex;
+    padding-bottom: 10px;
+		width:100%;
+	}
+}
+
+
+/*Menu*/
+/* ============ desktop view ============ */
+@media all and (min-width: 992px) {
+	.dropdown-menu li{ position: relative; 	}
+	.nav-item .submenu{
+		display: none;
+		position: absolute;
+		left:100%; top:-7px;
+	}
+	.nav-item .submenu-left{
+		right:100%; left:auto;
+	}
+	.dropdown-menu > li:hover{ background-color: #f1f1f1 }
+	.dropdown-menu > li:hover > .submenu{ display: block; }
+}
+/* ============ desktop view .end// ============ */
+
+/* ============ small devices ============ */
+@media (max-width: 991px) {
+  .dropdown-menu .dropdown-menu{
+      margin-left:0.7rem; margin-right:0.7rem; margin-bottom: .5rem;
+  }
+}
+/* ============ small devices .end// ============ */

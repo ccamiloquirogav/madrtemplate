@@ -1,0 +1,8 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:madrtemplate/Configuration/TypoScript/Menu/services.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:madrtemplate/Configuration/TypoScript/Menu/main.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:madrtemplate/Configuration/TypoScript/Menu/breadcrumb.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:madrtemplate/Configuration/TypoScript/Page/system.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:madrtemplate/Configuration/TypoScript/Page/page.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:madrtemplate/Configuration/TypoScript/Page/config.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:madrtemplate/Configuration/TypoScript/Language/config.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:madrtemplate/Configuration/TypoScript/Page/template.ts">
