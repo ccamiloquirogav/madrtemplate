@@ -1,5 +1,6 @@
 ## v1.0.05 - Nelson Velasco - 2022-12-02
 - Se ajusta la clase active del menú para elementos activos
+- Se actualiza el enlace a home desde el menú
 
 ## v1.0.04 - Nelson Velasco - 2022-11-24
 - Se agrega buscador
