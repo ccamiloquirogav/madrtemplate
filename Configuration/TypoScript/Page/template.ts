@@ -80,6 +80,8 @@ page.10 {
 		madrsd_contactEmailAccount.value = {$tx_madrtemplate.parameters.contact.emailAccount}
 		madrsd_aboutLinkUid = TEXT
 		madrsd_aboutLinkUid.value = {$tx_madrtemplate.parameters.aboutLinkUid}
+		madrsd_searchPid = TEXT
+		madrsd_searchPid.value = 13
 		madrsd_lastUpdateDate = TEXT
 		madrsd_lastUpdateDate {
 			data = page:SYS_LASTCHANGED
@@ -99,7 +101,7 @@ page.10 {
 		default = TEXT
 		default.value = {$tx_madrtemplate.filepaths.pri}/Templates/Page.html
 	}
-	# Data Procesing
+	# Menu Main - Data Procesing 
 	dataProcessing {
       10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
       10 {

@@ -14,60 +14,61 @@
 	      <span class="navbar-toggler-icon"></span>
 	    </button>
 	    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<!-- Main Menu -->
-				<ul class="navbar-nav me-auto mb-2 mb-lg-0 d-none d-lg-flex">
+			<!-- Main Menu -->
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0 d-none d-lg-flex">
 	         <f:for each="{mainnavigation}" as="menuItem">
 	            <li class="nav-item {f:if(condition:'{menuItem.children}',then:'dropdown')}">
-								<f:if condition="{menuItem.children}">
-									<f:then>
-										<!-- Item has children -->
-										<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-											{menuItem.title}
-										</a>
-										<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-											<f:for each="{menuItem.children}" as="menuItemLevel2">
-												<f:if condition="{menuItemLevel2.spacer}">
-													<f:then><div class="dropdown-divider"></div></f:then>
-													<f:else>
-														<li>
-															<f:if condition="{menuItemLevel2.children}">
-																<f:then>
-																	<a class="nav-link dropdown-toggle {f:if(condition:'{menuItemLevel2.active}',then:'active')}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-																		{menuItemLevel2.title}
-																	</a>
-																	<ul class="submenu dropdown-menu">
-																		<f:for each="{menuItemLevel2.children}" as="menuItemLevel3">
-																			<f:link.page pageUid="{menuItemLevel3.data.uid}"  class="nav-link {f:if(condition:'{menuItem.active}',then:'active')}">
-																					{menuItemLevel3.title}
-																			</f:link.page>
-																		</f:for>
-																		<li></li>
-																	</ul>
-																</f:then>
-																<f:else>
-																	<f:link.page pageUid="{menuItemLevel2.data.uid}"  class="nav-link dropdown-item {f:if(condition:'{menuItem.active}',then:'active')}">
-																			{menuItemLevel2.title}
-																	</f:link.page>
-																</f:else>
-															</f:if>
-														</li>
-													</f:else>
-												</f:if>
-											</f:for>
-										</ul>
-									</f:then>
-									<f:else>
-										<!-- Item has no children -->
-										<f:link.page pageUid="{menuItem.data.uid}"  class="nav-link {f:if(condition:'{menuItem.active}',then:'active')}">
-												{menuItem.title}
-										</f:link.page>
-									</f:else>
+						<f:if condition="{menuItem.children}">
+						<f:then>
+						<!-- Item has children -->
+						<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+							{menuItem.title}
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<f:for each="{menuItem.children}" as="menuItemLevel2">
+								<f:if condition="{menuItemLevel2.spacer}">
+								<f:then><div class="dropdown-divider"></div></f:then>
+								<f:else>
+									<li>
+										<f:if condition="{menuItemLevel2.children}">
+										<f:then>
+											<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+												{menuItemLevel2.title}
+											</a>
+											<ul class="submenu dropdown-menu">
+												<f:for each="{menuItemLevel2.children}" as="menuItemLevel3">
+													<li>
+													<f:link.page pageUid="{menuItemLevel3.data.uid}"  class="nav-link {f:if(condition:'{menuItemLevel3.active}',then:'active')}">
+															{menuItemLevel3.title}
+													</f:link.page>
+													</li>
+												</f:for>
+											</ul>
+										</f:then>
+										<f:else>
+											<f:link.page pageUid="{menuItemLevel2.data.uid}"  class="nav-link {f:if(condition:'{menuItemLevel2.active}',then:'active')}">
+													{menuItemLevel2.title}
+											</f:link.page>
+										</f:else>
+										</f:if>
+									</li>
+								</f:else>
 								</f:if>
+							</f:for>
+						</ul>
+						</f:then>
+						<f:else>
+							<!-- Item has no children -->
+							<f:link.page pageUid="{menuItem.data.uid}"  class="nav-link {f:if(condition:'{menuItem.active}',then:'active')}">
+									{menuItem.title}
+							</f:link.page>
+						</f:else>
+					</f:if>
 	            </li>
 	         </f:for>
 	      </ul>
-				<!-- Responsive Menu -->
-				<ul class="list-group d-flex d-lg-none">
+			<!-- Responsive Menu -->
+			<ul class="list-group d-flex d-lg-none">
 				<!-- <ul class=""> -->
 	         <f:for each="{mainnavigation}" as="menuItem">
 	            <li class="list-group-item {f:if(condition:'{menuItem.children}',then:'dropdown')}">
@@ -90,14 +91,14 @@
 																	</a>
 																	<div class="collapse" id="res_menu_{menuItemLevel2.data.uid}">
 																		<f:for each="{menuItemLevel2.children}" as="menuItemLevel3">
-																			<f:link.page pageUid="{menuItemLevel3.data.uid}"  class="nav-link {f:if(condition:'{menuItem.active}',then:'active')}">
+																			<f:link.page pageUid="{menuItemLevel3.data.uid}"  class="nav-link {f:if(condition:'{menuItemLevel3.active}',then:'active')}">
 																					{menuItemLevel3.title}
 																			</f:link.page>
 																		</f:for>
 																	</div>
 																</f:then>
 																<f:else>
-																	<f:link.page pageUid="{menuItemLevel2.data.uid}"  class="nav-link dropdown-item {f:if(condition:'{menuItem.active}',then:'active')}">
+																	<f:link.page pageUid="{menuItemLevel2.data.uid}"  class="nav-link {f:if(condition:'{menuItemLevel2.active}',then:'active')}">
 																			{menuItemLevel2.title}
 																	</f:link.page>
 																</f:else>
@@ -119,10 +120,11 @@
 	         </f:for>
 	      </ul>
 
-	      <form class="d-flex" role="search">
-	        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-	        <button class="btn btn-outline-success" type="submit">Search</button>
-	      </form>
+			<form action="{f:uri.action(controller: 'Search', action: 'search', extensionName: 'indexedsearch', pluginName: 'Pi2', pageUid: madrsd_searchPid)}" method="POST" role="search" class="d-flex">
+				<input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" name="tx_indexedsearch_pi2[search][sword]">
+				<button class="btn btn-outline-success" type="submit">Buscar</button>
+			</form>
+
 	    </div>
 	  </div>
 	</nav>

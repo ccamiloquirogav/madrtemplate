@@ -8,10 +8,10 @@ $EM_CONF[$_EXTKEY] = [
     'author_company' => 'Ministerio de Agricultura y Desarrollo Rutal',
     'state' => 'stable',
     'clearCacheOnLoad' => 0,
-    'version' => '1.0.3',
+    'version' => '1.0.05',
     'constraints' => [
         'depends' => [
-            'typo3' => '11.5.0-12.99.99',
+            'typo3' => '11.5.0-11.99.99',
         ],
         'conflicts' => [
         ],
