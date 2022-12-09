@@ -5,6 +5,7 @@ page {
 	shortcutIcon = EXT:madrtemplate/Resources/Public/images/favicon.ico
 	includeCSS {
 		bootstrap_bdc = https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css
+		madr_govco = {$tx_madrtemplate.filepaths.css}/govco_font.css
 		madr_estilos = {$tx_madrtemplate.filepaths.css}/madr.css
 	}
 	includeJS {

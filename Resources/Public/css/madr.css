@@ -41,8 +41,16 @@ h5 {
   background-color: #3366CC;
 }
 
-.img_logo_gov img {
+.img_logomarcapais {
+  border-right: 1px solid #fff;
   height: 1.5rem;
+  padding-right: 10px;
+  width: auto;
+}
+
+.img_logogov {
+  height: 1.5rem;
+  padding-left: 10px;
   width: 6.8rem;
 }
 
@@ -74,7 +82,15 @@ h5 {
   color: #ffffff;
 }
 
-.barra-superior-govco a {
+.bar_top_madr {
+  align-items: center;
+  display: flex;
+  height: 3rem;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.img_govco_bartop {
   content: url(https://cdn.www.gov.co/assets/images/logo.svg);
   height: 1.875rem;
   width: 8.5rem;
@@ -111,7 +127,85 @@ h5 {
   }
 }
 
+.bar_top_madr form {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 1.5rem;
+  height: 80%;
+}
+
+.bar_top_madr form input {
+  background-color: transparent;
+  border: none;
+  border-radius: 1.5rem;
+  color: #fff;
+}
+
+.bar_top_madr form input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.bar_top_madr form button {
+  align-items: center;
+  background-color: #737373;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  height: 2.25rem;
+  justify-content: center;
+  width: 2.25rem;
+}
+
 /*Menu*/
+#cnt_bar_menu {
+  flex-direction: column;
+  margin: 2px;
+}
+
+#mnu_top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-bottom: 2px !important;
+  width: 100%;
+}
+
+#mnu_top .nav-item {
+  align-items: center;
+  color: #173A59;
+  display: flex;
+  background-color: #DCE5F4;
+  font-size: 12px;
+  justify-content: center;
+  margin: 0 0 0 2px;
+  padding: 5px 15px;
+  transition: all 0.2s;
+}
+
+#mnu_top .nav-item:hover {
+  background-color: #4C74B6;
+  color: #fff;
+}
+
+.cnt_navbar_main {
+  padding: 0;
+}
+
+#mnu_main {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+#mnu_main .nav-item {
+  background-color: #EDEDED;
+  padding: 0px 10px;
+  transition: all 0.5s;
+}
+
+#mnu_main .nav-item:hover {
+  background-color: #e6e6e6;
+}
+
 /* ============ desktop view ============ */
 @media all and (min-width: 992px) {
   .dropdown-menu li {
