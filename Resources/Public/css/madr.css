@@ -174,7 +174,8 @@ h5 {
   color: #173A59;
   display: flex;
   background-color: #DCE5F4;
-  font-size: 12px;
+  font-size: 13px;
+  font-weight: 700;
   justify-content: center;
   margin: 0 0 0 2px;
   padding: 5px 15px;
@@ -198,8 +199,18 @@ h5 {
 
 #mnu_main .nav-item {
   background-color: #EDEDED;
-  padding: 0px 10px;
+  padding: 10px 22px;
+  text-transform: uppercase;
   transition: all 0.5s;
+}
+
+#mnu_main .nav-item a {
+  color: #2C4156;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 13px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
 
 #mnu_main .nav-item:hover {

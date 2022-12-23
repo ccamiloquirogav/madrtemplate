@@ -1,4 +1,7 @@
-## v1.0.06 - Nelson Velasco - 2022-12-009
+## v1.0.07 - Nelson Velasco - 2022-12-21
+- Se ajusta estilos del menú del header
+
+## v1.0.06 - Nelson Velasco - 2022-12-09
 - Se agrega el menú extra en la parte superior del menú principal
 - Se agrega la tipografía de íconos
 - Se ajusta estilos en menú principal
