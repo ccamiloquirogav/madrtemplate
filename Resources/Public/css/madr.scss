@@ -12,7 +12,7 @@ $color_dim_gray : #737373; //rgba(115, 115, 115, 1) govcolor-dim-gray
 $color_silver : #BABABA; //rgba(186, 186, 186, 1) govcolor-silver
 $color_concrete : #F2F2F2; //rgba(242, 242, 242, 1) govcolor-concrete
 $color_hawkes_blue : #F6F8F9; //rgba(246, 248, 249, 1) govcolor-hawkes-blue
-$color_white : #ffffff; //rgba(255, 255, 255, 1) govcolor-white
+$cwhite : #ffffff; //rgba(255, 255, 255, 1) govcolor-white
 $color_radical_red : #F42F63; //rgba(244, 47, 99, 1) govcolor-radical-red
 $color_shiraz : #A80521; //rgba(168, 5, 33, 1) govcolor-shiraz
 $color_orange : #F3561F; //rgba(243, 86, 31, 1) govcolor-orange
@@ -37,15 +37,15 @@ h2{ font-size: 22px;}
 h3{ font-size: 20px;}
 h4{ font-size: 18px;}
 h5{ font-size: 16px;}
+//
+.pl-20{ padding-left: 20px; }
+.pl-40{ padding-left: 40px; }
+.pr-40{ padding-right: 40px; }
 
 /*Header*/
 .cnt_footer,
 .cnt_header{ background-color: $color_marine; }
-.img_logo_gov img{
-  // height: 1.875rem;
-  // width: 8.5rem;
 
-}
 .img_logomarcapais{
 	border-right: 1px solid #fff;
 	height: 1.5rem;
@@ -65,7 +65,7 @@ h5{ font-size: 16px;}
 .cnt_header span{ font-weight: bold; }
 /*Footer*/
 .cnt_footer{
-  color: $color_white;
+  color: $cwhite;
 }
 .cnt_footer .navbar{ justify-content: space-between!important;}
 .info_footer a{
@@ -74,6 +74,35 @@ h5{ font-size: 16px;}
 }
 .cnt_footer a{ color: #ffffff; }
 // .img_logo_gov
+.cnt_logo_gov_footer{
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+.img_logo_gov{
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+.img_logomarcapais_footer{
+	// height: 1.5rem;
+	height: auto;
+	max-width: 56%;
+	// min-width: 75px;
+	// width: auto;
+	width: 75px;
+	// width: 56%;
+}
+.img_logogov_footer{
+	// height: 1.5rem;
+	height: auto;
+	max-width: 80%;
+	// min-width: 166px;
+	// width: 6.8rem;
+	width: 166px;
+	// width: 80%;
+}
 .bar_top_madr{
 	align-items: center;
 	display: flex;
@@ -100,7 +129,7 @@ h5{ font-size: 16px;}
 .icon_social span{
   font-size: 10pt;
   padding-left: 5px;
-  text-transform: uppercase;
+  // text-transform: uppercase;
 }
 .icon_social{
   @media (max-width: 768px) {
@@ -133,8 +162,30 @@ h5{ font-size: 16px;}
 	justify-content: center;
 	width: 2.25rem;
 }
-
-
+.cnt_col_footer{
+	font-size: 12px;
+	letter-spacing: 0.2px;
+}
+.cnt_col_footer .container{
+	border-left: 1px solid $cwhite;
+	padding: 0px 30px;
+}
+.cnt_footer_social{
+	display: flex;
+	flex-direction: column;
+}
+.txt_footer_title{
+	@media (max-width: 1200px) {
+     text-align: center;
+ 	}
+}
+.cnt_footer_extra{
+	@media (max-width: 1200px) {
+		flex-direction: column;
+		padding-top: 40px;
+		text-align: right;
+ 	}
+}
 /*Menu*/
 #cnt_bar_menu{
 	flex-direction: column;

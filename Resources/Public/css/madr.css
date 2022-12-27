@@ -35,6 +35,18 @@ h5 {
   font-size: 16px;
 }
 
+.pl-20 {
+  padding-left: 20px;
+}
+
+.pl-40 {
+  padding-left: 40px;
+}
+
+.pr-40 {
+  padding-right: 40px;
+}
+
 /*Header*/
 .cnt_footer,
 .cnt_header {
@@ -82,6 +94,31 @@ h5 {
   color: #ffffff;
 }
 
+.cnt_logo_gov_footer {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.img_logo_gov {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.img_logomarcapais_footer {
+  height: auto;
+  max-width: 56%;
+  width: 75px;
+}
+
+.img_logogov_footer {
+  height: auto;
+  max-width: 80%;
+  width: 166px;
+}
+
 .bar_top_madr {
   align-items: center;
   display: flex;
@@ -116,7 +153,6 @@ h5 {
 .icon_social span {
   font-size: 10pt;
   padding-left: 5px;
-  text-transform: uppercase;
 }
 
 @media (max-width: 768px) {
@@ -153,6 +189,35 @@ h5 {
   height: 2.25rem;
   justify-content: center;
   width: 2.25rem;
+}
+
+.cnt_col_footer {
+  font-size: 12px;
+  letter-spacing: 0.2px;
+}
+
+.cnt_col_footer .container {
+  border-left: 1px solid #ffffff;
+  padding: 0px 30px;
+}
+
+.cnt_footer_social {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 1200px) {
+  .txt_footer_title {
+    text-align: center;
+  }
+}
+
+@media (max-width: 1200px) {
+  .cnt_footer_extra {
+    flex-direction: column;
+    padding-top: 40px;
+    text-align: right;
+  }
 }
 
 /*Menu*/
