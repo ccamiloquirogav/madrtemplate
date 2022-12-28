@@ -3,8 +3,14 @@ $color_marine : #3366CC; //rgb(51, 102, 204) govcolor-marine
 
 $cblue: #2C4156;
 $color_blue_light : #E6EFFD; //rgba(230, 239, 253, 1) govcolor-blue-light
-$cblue2: #173A59;
 
+$cblue_letter: #173A59;
+$cblue1: #DCE5F4;
+$cblue2: #D0DCF0;
+$cblue3: #CDDAEF;
+$cblue4: #C2D2EC;
+$cblue5: #A5BDE3;
+$cblue6: #4C74B6;
 
 $color_black : #000000; //rgba(0, 0, 0, 1) govcolor-black
 $color_tundora : #4B4B4B; //rgba(75, 75, 75, 1) govcolor-tundora
@@ -13,6 +19,7 @@ $color_silver : #BABABA; //rgba(186, 186, 186, 1) govcolor-silver
 $color_concrete : #F2F2F2; //rgba(242, 242, 242, 1) govcolor-concrete
 $color_hawkes_blue : #F6F8F9; //rgba(246, 248, 249, 1) govcolor-hawkes-blue
 $cwhite : #ffffff; //rgba(255, 255, 255, 1) govcolor-white
+$cwhite2 : #f6f6f6;
 $color_radical_red : #F42F63; //rgba(244, 47, 99, 1) govcolor-radical-red
 $color_shiraz : #A80521; //rgba(168, 5, 33, 1) govcolor-shiraz
 $color_orange : #F3561F; //rgba(243, 86, 31, 1) govcolor-orange
@@ -200,9 +207,9 @@ h5{ font-size: 16px;}
 }
 #mnu_top .nav-item{
 	align-items: center;
-	color: $cblue2;
+	// color: $cblue_letter;
 	display:flex;
-	background-color: #DCE5F4;
+	// background-color: $cblue1;
 	font-size: 13px;
 	font-weight: 700;
 	justify-content: center;
@@ -210,6 +217,17 @@ h5{ font-size: 16px;}
 	padding: 5px 15px;
 	transition: all 0.2s;
 }
+.cblue1{ background-color: $cblue1; }
+.cblue2{ background-color: $cblue2; }
+.cblue3{ background-color: $cblue3; }
+.cblue4{ background-color: $cblue4; }
+.cblue5{ background-color: $cblue5; }
+.cblue1,.cblue2,.cblue3,.cblue4,.cblue5{ color: $cblue_letter; }
+.cblue6{
+	background-color: $cblue6;
+	color: $cwhite2;
+}
+
 #mnu_top .nav-item:hover{
 	background-color: #4C74B6;
 	color: #fff;

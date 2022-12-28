@@ -236,15 +236,42 @@ h5 {
 
 #mnu_top .nav-item {
   align-items: center;
-  color: #173A59;
   display: flex;
-  background-color: #DCE5F4;
   font-size: 13px;
   font-weight: 700;
   justify-content: center;
   margin: 0 0 0 2px;
   padding: 5px 15px;
   transition: all 0.2s;
+}
+
+.cblue1 {
+  background-color: #DCE5F4;
+}
+
+.cblue2 {
+  background-color: #D0DCF0;
+}
+
+.cblue3 {
+  background-color: #CDDAEF;
+}
+
+.cblue4 {
+  background-color: #C2D2EC;
+}
+
+.cblue5 {
+  background-color: #A5BDE3;
+}
+
+.cblue1, .cblue2, .cblue3, .cblue4, .cblue5 {
+  color: #173A59;
+}
+
+.cblue6 {
+  background-color: #4C74B6;
+  color: #f6f6f6;
 }
 
 #mnu_top .nav-item:hover {

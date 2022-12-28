@@ -1,3 +1,6 @@
+## v1.0.09 - Nelson Velasco - 2022-12-28
+- Se actualiza estilos del menú superior en el header
+
 ## v1.0.08 - Nelson Velasco - 2022-12-27
 - Se actualiza el footer
 
