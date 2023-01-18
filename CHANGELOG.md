@@ -1,3 +1,6 @@
+## v1.0.10 - Nelson Velasco - 2023-01-17
+- Se agregan los favicon de dispositivos
+
 ## v1.0.09 - Nelson Velasco - 2022-12-28
 - Se actualiza estilos del menú superior en el header
 - Se agrega efecto zoom a imágenes con enlace

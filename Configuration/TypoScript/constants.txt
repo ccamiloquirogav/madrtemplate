@@ -1,6 +1,6 @@
 tx_madrtemplate {
 	filepaths {
-		pri = EXT:madrtemplate/Resources/Private
+		pri  = EXT:madrtemplate/Resources/Private
 		css  = EXT:madrtemplate/Resources/Public/css
 		js   = EXT:madrtemplate/Resources/Public/js
 		img  = EXT:madrtemplate/Resources/Public/images
