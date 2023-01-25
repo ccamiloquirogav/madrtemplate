@@ -1,3 +1,7 @@
+## v1.0.11 - Nelson Velasco - 2023-01-25
+- Actualización del menú en responsive
+- Se agrega sección Perfiles en el menú responsive
+
 ## v1.0.10 - Nelson Velasco - 2023-01-17
 - Se agregan los favicon de dispositivos
 

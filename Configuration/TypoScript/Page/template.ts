@@ -38,7 +38,7 @@ page.10 {
 		30 {
 			special = directory
 			#special.value.field = pages
-			special.value = 5
+			special.value = 57
 			levels = 1
          as = profilesnavigation
 		}
