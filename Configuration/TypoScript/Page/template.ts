@@ -12,20 +12,6 @@ page.10 {
 	variables {
 		madrsd_searchPid = TEXT
 		madrsd_searchPid.value = 13
-
-		madr_pequenosProductores = TEXT
-		madr_pequenosProductores.value = {$tx_madrtemplate.parameters.links.pequenosProductores}
-		madr_medianosProductores = TEXT
-		madr_medianosProductores.value = {$tx_madrtemplate.parameters.links.medianosProductores}
-		madr_grandesProductores = TEXT
-		madr_grandesProductores.value = {$tx_madrtemplate.parameters.links.grandesProductores}
-		madr_pescadoresAcuicultures = TEXT
-		madr_pescadoresAcuicultures.value = {$tx_madrtemplate.parameters.links.pescadoresAcuicultures}
-		madr_apicultores = TEXT
-		madr_apicultores.value = {$tx_madrtemplate.parameters.links.apicultores}
-		madr_mujerRural = TEXT
-		madr_mujerRural.value = {$tx_madrtemplate.parameters.links.mujerRural}
-
 	} # end Variables
 	# Assign the Template files with the Fluid Backend-Template
 	file.stdWrap.cObject = CASE
@@ -47,6 +33,14 @@ page.10 {
 		20 = TYPO3\CMS\Frontend\DataProcessing\SiteProcessor
 		20 {
 		   as = site
+		}
+		30 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+		30 {
+			special = directory
+			#special.value.field = pages
+			special.value = 5
+			levels = 1
+         as = profilesnavigation
 		}
    }
 }

@@ -7,12 +7,6 @@ tx_madrtemplate {
 	}
 	parameters {
 		links {
-			pequenosProductores = #
-			medianosProductores = #
-			grandesProductores = #
-			pescadoresAcuicultures = #
-			apicultores = #
-			mujerRural = #
 		}
 		showFinder = 1
 		titleComplement =

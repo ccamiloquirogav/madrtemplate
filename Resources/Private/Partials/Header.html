@@ -1,151 +1,170 @@
 <header class="cnt_header">
-	<!-- -->
+	<!-- Top bar -->
 	<nav class="navbar-expand-lg bar_top_madr container-fluid" aria-label="Barra superior">
 	  <a href="https://www.gov.co/home/" target="_blank" aria-label="Portal del Estado Colombiano - GOV.CO" class="img_govco_bartop"></a>
+	  <!-- Search -->
 	  <form action="{f:uri.action(controller: 'Search', action: 'search', extensionName: 'indexedsearch', pluginName: 'Pi2', pageUid: madrsd_searchPid)}" method="POST" role="search" class="d-flex">
 		  <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" name="tx_indexedsearch_pi2[search][sword]">
-		  <!-- <button class="btn btn-outline-success" type="submit">Buscar</button> -->
 		  <button class="btn btn-outline-success" type="submit"><span class="govco-search"></span></button>
 	  </form>
 	</nav>
-	<!-- -->
-	<nav class="navbar navbar-expand-lg navbar-light bg-light cnt_navbar_main">
-	  <div class="container-fluid p-0" id="">
+	<!-- Nav -->
+	<nav class="cnt_navbar_main">
+	  	<div class="container-fluid p-0 cnt_navbar_desktop" id="">
+		  	<!-- logo Ministerio de Agricultura y Desarrollo Rural -->
 			<a class="navbar-brand" href="{site.configuration.base}">
 				<f:image src="EXT:madrtemplate/Resources/Public/images/LogoMADRcopia2022.png" alt="Ministerio de Agricultura y Desarrollo Rural"/>
 			</a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#cnt_bar_menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-
-			<div class="collapse navbar-collapse" id="cnt_bar_menu">
+			<!-- Hamburguer -->
+			<div class="hamburguer" data-icon="hamburguer" id="btn_hamburguer" data-bs-toggle="collapse" data-bs-target="#cnt_bar_menu_res">
+				<div class="line"></div>
+				<div class="line"></div>
+				<div class="line"></div>
+			</div>
+			<!-- Menú -->
+			<div id="cnt_bar_menu">
 				<!-- Top Menu -->
-				<ul class="navbar-nav me-auto mb-2 mb-lg-0 d-none d-lg-flex" id="mnu_top">
-					<f:if condition="{madr_pequenosProductores}">
-						<li><a href="{madr_pequenosProductores}" class="nav-item cblue1">Pequeños Productores</a></li>
-					</f:if>
-					<f:if condition="{madr_medianosProductores}">
-						<li><a href="{madr_medianosProductores}" class="nav-item cblue2">Medianos Productores</a></li>
-					</f:if>
-					<f:if condition="{madr_grandesProductores}">
-						<li><a href="{madr_grandesProductores}" class="nav-item cblue3">Grandes Productores</a></li>
-					</f:if>
-					<f:if condition="{madr_pescadoresAcuicultures}">
-						<li><a href="{madr_pescadoresAcuicultures}" class="nav-item cblue4">Pescadores - Acuicultures</a></li>
-					</f:if>
-					<f:if condition="{madr_apicultores}">
-						<li><a href="{madr_apicultores}" class="nav-item cblue5">Apicultores</a></li>
-					</f:if>
-					<f:if condition="{madr_mujerRural}">
-						<li><a href="{madr_mujerRural}" class="nav-item cblue6">Mujer Rural</a></li>
-					</f:if>
-		      </ul>
-				<!-- Main Menu -->
-				<ul class="navbar-nav me-auto mb-2 mb-lg-0 d-none d-lg-flex" id="mnu_main">
-		         <f:for each="{mainnavigation}" as="menuItem">
-		            <li class="nav-item {f:if(condition:'{menuItem.children}',then:'dropdown')}">
-							<f:if condition="{menuItem.children}">
-							<f:then>
-							<!-- Item has children -->
-							<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-								{menuItem.title}
-							</a>
-							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<f:for each="{menuItem.children}" as="menuItemLevel2">
-									<f:if condition="{menuItemLevel2.spacer}">
-									<f:then><div class="dropdown-divider"></div></f:then>
-									<f:else>
-										<li>
-											<f:if condition="{menuItemLevel2.children}">
-											<f:then>
-												<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-													{menuItemLevel2.title}
-												</a>
-												<ul class="submenu dropdown-menu">
-													<f:for each="{menuItemLevel2.children}" as="menuItemLevel3">
-														<li>
-														<f:link.page pageUid="{menuItemLevel3.data.uid}"  class="nav-link {f:if(condition:'{menuItemLevel3.active}',then:'active')}">
-																{menuItemLevel3.title}
-														</f:link.page>
-														</li>
-													</f:for>
-												</ul>
-											</f:then>
-											<f:else>
-												<f:link.page pageUid="{menuItemLevel2.data.uid}"  class="nav-link {f:if(condition:'{menuItemLevel2.active}',then:'active')}">
-														{menuItemLevel2.title}
-												</f:link.page>
-											</f:else>
-											</f:if>
-										</li>
-									</f:else>
-									</f:if>
-								</f:for>
-							</ul>
-							</f:then>
-							<f:else>
-								<!-- Item has no children -->
-								<f:link.page pageUid="{menuItem.data.uid}"  class="nav-link {f:if(condition:'{menuItem.active}',then:'active')}">
-										{menuItem.title}
+				<f:if condition="{profilesnavigation}">
+					<ul id="mnu_top">
+						<f:for each="{profilesnavigation}" as="menuItemP">
+							<li>
+								<f:link.page pageUid="{menuItemP.data.uid}" class="nav-item {f:if(condition:'{menuItemP.active}',then:'active')}">
+										{menuItemP.title}
 								</f:link.page>
-							</f:else>
-						</f:if>
-		            </li>
-		         </f:for>
-		      </ul>
-				<!-- Responsive Menu -->
-				<ul class="list-group d-flex d-lg-none">
-					<!-- <ul class=""> -->
-		         <f:for each="{mainnavigation}" as="menuItem">
-		            <li class="list-group-item {f:if(condition:'{menuItem.children}',then:'dropdown')}">
-							<f:if condition="{menuItem.children}">
-								<f:then>
-									<!-- Item has children -->
-									<a class="nav-link dropdown-toggle" data-bs-toggle="collapse" href="#res_menu_{menuItem.data.uid}" aria-expanded="false" aria-controls="collapseExample">
-										{menuItem.title}
-									</a>
-									<ul class="list-group collapse" id="res_menu_{menuItem.data.uid}">
-										<f:for each="{menuItem.children}" as="menuItemLevel2">
-											<f:if condition="{menuItemLevel2.spacer}">
+							</li>
+						</f:for>
+			      </ul>
+				</f:if>
+				<!-- Main Menu -->
+				<f:if condition="{mainnavigation}">
+					<ul id="mnu_main">
+			         <f:for each="{mainnavigation}" as="menuItem">
+			            <li class="nav-item {f:if(condition:'{menuItem.children}',then:'dropdown')}">
+								<f:if condition="{menuItem.children}">
+									<f:then>
+										<!-- Item has children -->
+										<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+											{menuItem.title}
+										</a>
+										<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+											<f:for each="{menuItem.children}" as="menuItemLevel2">
+												<f:if condition="{menuItemLevel2.spacer}">
 												<f:then><div class="dropdown-divider"></div></f:then>
 												<f:else>
-													<li class="list-group-item">
+													<li>
 														<f:if condition="{menuItemLevel2.children}">
-															<f:then>
-																<a class="nav-link dropdown-toggle" data-bs-toggle="collapse" href="#res_menu_{menuItemLevel2.data.uid}" aria-expanded="false" aria-controls="collapseExample">
+														<f:then>
+															<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+																{menuItemLevel2.title}
+															</a>
+															<ul class="submenu dropdown-menu">
+																<f:for each="{menuItemLevel2.children}" as="menuItemLevel3">
+																	<li>
+																	<f:link.page pageUid="{menuItemLevel3.data.uid}"  class="nav-link {f:if(condition:'{menuItemLevel3.active}',then:'active')}">
+																			{menuItemLevel3.title}
+																	</f:link.page>
+																	</li>
+																</f:for>
+															</ul>
+														</f:then>
+														<f:else>
+															<f:link.page pageUid="{menuItemLevel2.data.uid}"  class="nav-link {f:if(condition:'{menuItemLevel2.active}',then:'active')}">
 																	{menuItemLevel2.title}
-																</a>
-																<div class="collapse" id="res_menu_{menuItemLevel2.data.uid}">
-																	<f:for each="{menuItemLevel2.children}" as="menuItemLevel3">
-																		<f:link.page pageUid="{menuItemLevel3.data.uid}"  class="nav-link {f:if(condition:'{menuItemLevel3.active}',then:'active')}">
-																				{menuItemLevel3.title}
-																		</f:link.page>
-																	</f:for>
-																</div>
-															</f:then>
-															<f:else>
-																<f:link.page pageUid="{menuItemLevel2.data.uid}"  class="nav-link {f:if(condition:'{menuItemLevel2.active}',then:'active')}">
-																		{menuItemLevel2.title}
-																</f:link.page>
-															</f:else>
+															</f:link.page>
+														</f:else>
 														</f:if>
 													</li>
 												</f:else>
-											</f:if>
-										</f:for>
-									</ul>
-								</f:then>
-								<f:else>
-									<!-- Item has no children -->
-									<f:link.page pageUid="{menuItem.data.uid}"  class="nav-link {f:if(condition:'{menuItem.active}',then:'active')}">
-											{menuItem.title}
-									</f:link.page>
-								</f:else>
-							</f:if>
-		            </li>
-		         </f:for>
-		      </ul>
+												</f:if>
+											</f:for>
+										</ul>
+									</f:then>
+									<f:else>
+										<!-- Item has no children -->
+										<f:link.page pageUid="{menuItem.data.uid}"  class="nav-link {f:if(condition:'{menuItem.active}',then:'active')}">
+												{menuItem.title}
+										</f:link.page>
+									</f:else>
+								</f:if>
+			            </li>
+			         </f:for>
+			      </ul>
+				</f:if>
 	    	</div>
-	  </div>
+	  	</div>
+	  	<!-- Responsive Menu -->
+	  	<div class="container-fluid p-0 collapse" id="cnt_bar_menu_res">
+		  <f:if condition="{mainnavigation}">
+			  <ul>
+				  <f:for each="{mainnavigation}" as="menuItem">
+					  <li class="list-group-item {f:if(condition:'{menuItem.children}',then:'dropdown')}">
+						  <f:if condition="{menuItem.children}">
+							  <f:then>
+								  <!-- Item has children -->
+								  <a class="nav-link dropdown-toggle" data-bs-toggle="collapse" href="#res_menu_{menuItem.data.uid}" aria-expanded="false" aria-controls="collapseExample">
+									  {menuItem.title}
+								  </a>
+								  <ul class="collapse" id="res_menu_{menuItem.data.uid}">
+									  <f:for each="{menuItem.children}" as="menuItemLevel2">
+										  <f:if condition="{menuItemLevel2.spacer}">
+											  <f:then><div class="dropdown-divider"></div></f:then>
+											  <f:else>
+												  <li class="list-group-item">
+													  	<f:if condition="{menuItemLevel2.children}">
+														  	<f:then>
+															  	<a class="nav-link dropdown-toggle" data-bs-toggle="collapse" href="#res_menu2_{menuItemLevel2.data.uid}" aria-expanded="false" aria-controls="collapseExample">
+																  {menuItemLevel2.title}
+															  	</a>
+															  	<ul class="collapse" id="res_menu2_{menuItemLevel2.data.uid}">
+																  	<f:for each="{menuItemLevel2.children}" as="menuItemLevel3">
+																		<li>
+																	  		<f:link.page pageUid="{menuItemLevel3.data.uid}"  class="nav-link {f:if(condition:'{menuItemLevel3.active}',then:'active')}">
+																			  	{menuItemLevel3.title}
+																	  		</f:link.page>
+																	  </li>
+																  	</f:for>
+															  	</ul>
+														  	</f:then>
+														  <f:else>
+															  <f:link.page pageUid="{menuItemLevel2.data.uid}"  class="nav-link {f:if(condition:'{menuItemLevel2.active}',then:'active')}">
+																	  {menuItemLevel2.title}
+															  </f:link.page>
+														  </f:else>
+													  </f:if>
+												  </li>
+											  </f:else>
+										  </f:if>
+									  </f:for>
+								  </ul>
+							  </f:then>
+							  <f:else>
+								  <!-- Item has no children -->
+								  <f:link.page pageUid="{menuItem.data.uid}"  class="nav-link {f:if(condition:'{menuItem.active}',then:'active')}">
+										  {menuItem.title}
+								  </f:link.page>
+							  </f:else>
+						  </f:if>
+					  </li>
+				  </f:for>
+
+				  	<!-- Top Menu -->
+	  				<f:if condition="{profilesnavigation}">
+						<li class="list-group-item dropdown">
+							<a class="nav-link dropdown-toggle" data-bs-toggle="collapse" href="#res_menu_top" aria-expanded="false" aria-controls="collapseExample">Perfiles</a>
+		  					<ul class="collapse" id="res_menu_top">
+		  						<f:for each="{profilesnavigation}" as="menuItemP">
+		  							<li class="list-group-item">
+		  								<f:link.page pageUid="{menuItemP.data.uid}" class="nav-link {f:if(condition:'{menuItemP.active}',then:'active')}">
+		  										{menuItemP.title}
+		  								</f:link.page>
+		  							</li>
+		  						</f:for>
+		  			      </ul>
+						</li>
+	  				</f:if>
+
+			  </ul>
+		  </f:if>
+	  	</div>
 	</nav>
 </header>
