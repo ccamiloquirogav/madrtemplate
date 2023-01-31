@@ -371,6 +371,11 @@ h5 {
   width: 100%;
 }
 
+#mnu_top li {
+  display: flex;
+  flex-grow: 1;
+}
+
 #mnu_top .nav-item {
   align-items: center;
   display: flex;
@@ -380,6 +385,7 @@ h5 {
   margin: 0 0 0 2px;
   padding: 5px 15px;
   transition: all 0.2s;
+  width: 100%;
 }
 
 #mnu_top li a {
@@ -439,7 +445,9 @@ h5 {
 
 #mnu_main .nav-item {
   background-color: #EDEDED;
-  padding: 10px 22px;
+  display: flex;
+  flex-grow: 1;
+  padding: 10px 0px;
   text-transform: uppercase;
   transition: all 0.5s;
 }
@@ -450,6 +458,7 @@ h5 {
   font-weight: 700;
   letter-spacing: 1px;
   line-height: 13px;
+  padding: 5px 12px;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
 

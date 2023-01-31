@@ -37,8 +37,8 @@ page.10 {
 		30 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
 		30 {
 			special = directory
-			#special.value.field = pages
-			special.value = 57
+			#special.value = 57
+			special.value = 5
 			levels = 1
          as = profilesnavigation
 		}
