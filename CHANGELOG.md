@@ -1,3 +1,12 @@
+## v1.0.14 - Nelson Velasco - 2023-02-28
+- Se habilita panel de accesibilidad
+
+## v1.0.13 - Nelson Velasco - 2023-02-07
+- Actualización de estilos del menú
+
+## v1.0.12 - Nelson Velasco - 2023-01-31
+- Actualización de estilos del menú
+
 ## v1.0.11 - Nelson Velasco - 2023-01-25
 - Actualización del menú en responsive
 - Se agrega sección Perfiles en el menú responsive

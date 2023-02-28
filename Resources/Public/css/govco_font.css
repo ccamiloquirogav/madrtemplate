@@ -12477,19 +12477,20 @@ table.table-externa tbody {
 }
 
 .barra-accesibilidad-govco {
-	height: 143px;
-	width: 48px;
-	position: fixed;
-	right: 0;
-	top: 35%;
+	align-items: center;
 	background-color: #004884 !important;
 	border-radius: 10px 0px 0px 10px;
+	height: 143px;
 	opacity: 1;
+	padding-bottom: 20px;
 	padding-left: 0px;
 	padding-right: 0px;
 	padding-top: 12px;
-	padding-bottom: 20px;
-	align-items: center;
+	position: fixed;
+	right: 0;
+	top: 35%;
+	width: 48px;
+	z-index: 10;
 }
 
 .barra-accesibilidad-govco .icon-contraste {
@@ -12829,47 +12830,17 @@ table.table-externa tbody {
 	opacity: 1;
 	position: relative;
 }
-
 .modo_oscuro-govco {
 	width: 100%;
-	align-items: center;
-	text-align: center;
 	background-color: #000;
 	color: #fff;
 }
-
-.modo_oscuro-govco .titulo-barra-accesibilidad {
-	font-family: Montserrat-SemiBold;
-	font-size: 20px;
-	margin: 0px;
-}
-
-.modo_oscuro-govco .descripcion-barra-accesibilidad {
-	font-family: WorkSans-Regular;
-	font-size: 16px;
-	margin: 0px;
-}
-
-.modo_claro-govco {
-	width: 100%;
-	align-items: center;
-	text-align: center;
-	background-color: #fff;
-}
-
-.modo_claro-govco .titulo-barra-accesibilidad {
-	color: #000;
-	font-family: Montserrat-SemiBold;
-	font-size: 20px;
-	margin: 0px;
-}
-
-.modo_claro-govco .descripcion-barra-accesibilidad {
-	color: #4B4B4B;
-	font-family: WorkSans-Regular;
-	font-size: 16px;
-	margin: 0px;
-}
+.modo_oscuro-govco p,
+.modo_oscuro-govco h1,
+.modo_oscuro-govco h2,
+.modo_oscuro-govco h3,
+.modo_oscuro-govco h4,
+.modo_oscuro-govco h5{ color: #fff!important; }
 
 #contenedor {
 	width: 500px;

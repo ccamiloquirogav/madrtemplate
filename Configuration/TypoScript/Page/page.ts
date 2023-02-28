@@ -9,6 +9,7 @@ page {
 		madr_estilos = {$tx_madrtemplate.filepaths.css}/madr.css
 	}
 	includeJS {
+		acctoolbar_js = {$tx_madrtemplate.filepaths.js}/acctoolbar.min.js
 		bootstrap_bdc_js = https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js
 		madr_js = {$tx_madrtemplate.filepaths.js}/madr.js
 	}
