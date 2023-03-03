@@ -12,6 +12,12 @@ page.10 {
 	variables {
 		madrsd_searchPid = TEXT
 		madrsd_searchPid.value = 13
+		madr_participa = TEXT
+		madr_participa.value = {$tx_madrtemplate.parameters.participa.participa}
+		madr_transparencia = TEXT
+		madr_transparencia.value = {$tx_madrtemplate.parameters.participa.transparencia}
+		madr_atencion = TEXT
+		madr_atencion.value = {$tx_madrtemplate.parameters.participa.atencion}
 	} # end Variables
 	# Assign the Template files with the Fluid Backend-Template
 	file.stdWrap.cObject = CASE

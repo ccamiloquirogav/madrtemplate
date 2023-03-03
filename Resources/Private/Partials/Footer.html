@@ -1,3 +1,33 @@
+<!-- Transparencia -->
+<div class="container-fluid cnt-participa">
+	<div class="row">
+		<f:if condition="{madr_transparencia}">
+			<a href="{madr_transparencia}" class="cnt_item_participa">
+				<div class="icon_participa">
+					<f:image src="EXT:madrtemplate/Resources/Public/images/icon_transparencia.png" alt="Transparencia"/>
+				</div>
+				<div class="lbl_participa">Transparencia</div>
+			</a>
+		</f:if>
+		<f:if condition="{madr_atencion}">
+			<a href="{madr_atencion}" class="cnt_item_participa">
+				<div class="icon_participa">
+					<f:image src="EXT:madrtemplate/Resources/Public/images/icon_ayuda.png" alt="Atención al ciudadano"/>
+				</div>
+				<div class="lbl_participa">Atención al ciudadano</div>
+			</a>
+		</f:if>
+		<f:if condition="{madr_participa}">
+			<a href="{madr_participa}" class="cnt_item_participa">
+				<div class="icon_participa">
+					<f:image src="EXT:madrtemplate/Resources/Public/images/icon_participa.png" alt="Participa"/>
+				</div>
+				<div class="lbl_participa">Participa</div>
+			</a>
+		</f:if>
+	</div>
+</div>
+
 <footer class="cnt_footer ">
 	<div class="container-fluid">
 		<div class="row"></div>
@@ -91,7 +121,6 @@
 	      </div>
    	</div>
 	</div>
-
   	<!-- Franja gov -->
   	<div class="container-fluid">
 	  	<nav class="navbar navbar-expand-lg row" aria-label="Barra inferior">

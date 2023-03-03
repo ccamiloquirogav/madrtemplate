@@ -1,3 +1,6 @@
+## v1.0.15 - Nelson Velasco - 2023-03-03
+- Se carga menú participa
+
 ## v1.0.14 - Nelson Velasco - 2023-02-28
 - Se habilita panel de accesibilidad
 

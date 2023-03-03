@@ -6,6 +6,11 @@ tx_madrtemplate {
 		img  = EXT:madrtemplate/Resources/Public/images
 	}
 	parameters {
+		participa {
+			participa = https://pruebasse.minagricultura.gov.co/participa
+			transparencia = https://pruebasse.minagricultura.gov.co/transparencia
+			atencion = #
+		}
 		links {
 		}
 		showFinder = 1

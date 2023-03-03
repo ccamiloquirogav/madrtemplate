@@ -11,6 +11,9 @@ $cblue3: #CDDAEF;
 $cblue4: #C2D2EC;
 $cblue5: #A5BDE3;
 $cblue6: #4C74B6;
+$cblue7: rgba(51, 102, 204, 0.25);
+$cblue8: #035593;
+
 
 $color_black : #000000; //rgba(0, 0, 0, 1) govcolor-black
 $color_tundora : #4B4B4B; //rgba(75, 75, 75, 1) govcolor-tundora
@@ -430,3 +433,36 @@ h5{ font-size: 16px;}
   }
 }
 /* ============ small devices .end// ============ */
+
+/* Participa */
+.cnt-participa{
+	background-color: $cblue7;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	padding: 20px 0;
+	position: relative;
+}
+.cnt-participa .row{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding: 0;
+	margin: 0;
+}
+.cnt_item_participa{
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	margin: 5px 10px;
+	width: fit-content;
+	@media (max-width: 1024px) {
+		width: 100%;
+ 	}
+}
+.lbl_participa{
+	align-items: center;
+	color: $cblue8;
+	display: flex;
+	font-size: 16px;
+	font-weight: 700;
+	justify-content: center;
+}
