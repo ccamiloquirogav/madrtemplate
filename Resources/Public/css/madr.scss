@@ -466,3 +466,116 @@ h5{ font-size: 16px;}
 	font-weight: 700;
 	justify-content: center;
 }
+
+
+// DANE
+#cnt_products_dane{
+	overflow: hidden;
+	position: relative;
+	// width: 100%;
+}
+.wrapper-slider {
+	margin: 50px auto;
+	position: relative;
+	width: 95%;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+// cnt_pros
+.items {
+	background-color: $cblue1;
+	// border: 1px solid red;
+	border-radius: 5px;
+	// box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+	cursor: pointer;
+	display: flex;
+	flex-wrap: nowrap;
+	height: 298px;
+	overflow: hidden;
+	padding: 10px;
+	position: relative;
+	-webkit-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	white-space: nowrap;
+	width: 100%;
+}
+.items.full{ height: 100%; }
+.items.active {
+	cursor: -webkit-grabbing;
+	cursor: -moz-grabbing;
+	cursor: grabbing;
+	background-color: #f9f9f9;
+}
+// .items.active .item {
+.items.active .cnt_city_pro {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+.items .item {
+	background-color: #215772;
+	color:#FFF;
+	width: 200px;
+	// height: 200px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 5px;
+	font-size: 50px;
+	-webkit-transform: scale(0.98);
+	transform: scale(0.97);
+}
+
+.cnt_city_pro {
+	background-color: #fff;
+	// border: 1px solid red;
+	border-radius: 5px;
+	display: flex;
+	flex-basis: 300px;
+	flex-direction: column;
+	flex-grow: 0;
+   flex-shrink: 0;
+	overflow: hidden;
+	margin: 10px;
+	padding: 20px;
+	// width: 400px;
+}
+.cnt_city_pro h3{
+	font-size: 16px;
+	text-align: center;
+	width: 100%;
+}
+.cnt_city_pro{
+	font-size: 14px;
+	-webkit-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+.item_price{
+	border-bottom: 1px solid #eee;
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 5px;
+}
+.item_price:nth-child(odd) {
+	background: #eee;
+}
+.btn_pros_all{
+	align-items: center;
+	background-color: $cblue6;
+	// border: 1px solid blue;
+	color: #fff;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	margin: 20px 0;
+	padding: 10px 0;
+	width: 100%;
+}
+.cnt_date_pros{
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	padding-bottom: 20px; 
+	width: 100%;
+}

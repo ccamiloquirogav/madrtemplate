@@ -1,3 +1,6 @@
+## v1.0.16 - Nelson Velasco - 2023-03-24
+- Se agrega funcionalidad para mostrar los resultados DANE
+
 ## v1.0.15 - Nelson Velasco - 2023-03-03
 - Se carga menú participa
 
