@@ -5,3 +5,8 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:madrtemplate/Configuration/TypoScript/Page/config.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:madrtemplate/Configuration/TypoScript/Language/config.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:madrtemplate/Configuration/TypoScript/Page/template.ts">
+
+# custom js libraries
+[traverse(page, "uid") in [1,186]]
+	page.includeJSFooter.madrtemplate_dane = EXT:madrtemplate/Resources/Public/js/productosdane.js
+[END]

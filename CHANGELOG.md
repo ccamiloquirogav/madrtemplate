@@ -1,3 +1,7 @@
+## v1.0.17 - Nelson Velasco - 2023-04-19
+- Se hace ajuste en funcionalidad para mostrar los precios de los productos DANE
+- Se crea una versión ticker y se agregan imágenes a los respectivos productos
+
 ## v1.0.16 - Nelson Velasco - 2023-03-24
 - Se agrega funcionalidad para mostrar los resultados DANE
 
