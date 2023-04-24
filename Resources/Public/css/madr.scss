@@ -11,9 +11,13 @@ $cblue3: #CDDAEF;
 $cblue4: #C2D2EC;
 $cblue5: #A5BDE3;
 $cblue6: #4C74B6;
-$cblue7: rgba(51, 102, 204, 0.25);
-$cblue8: #035593;
+$cblue7: #5C81BD;
+$cblue8: #6B8CC3;
+$cblue9: #7896C8;
+$cblue10: #84A0CD;
 
+$cblue7a: rgba(51, 102, 204, 0.25);
+$cblue8a: #035593;
 
 $color_black : #000000; //rgba(0, 0, 0, 1) govcolor-black
 $color_tundora : #4B4B4B; //rgba(75, 75, 75, 1) govcolor-tundora
@@ -28,6 +32,17 @@ $color_shiraz : #A80521; //rgba(168, 5, 33, 1) govcolor-shiraz
 $color_orange : #F3561F; //rgba(243, 86, 31, 1) govcolor-orange
 $color_gold : #FFAB00; //rgba(255, 171, 0, 1) govcolor-gold
 $color_elf_green : #068460; //rgba(6, 132, 96, 1) govcolor-elf-Green
+
+$color_city1 : #001219;
+$color_city2 : #005f73;
+$color_city3 : #0a9396;
+$color_city4 : #94d2bd;
+$color_city5 : #e9d8a6;
+$color_city6 : #ee9b00;
+$color_city7 : #ca6702;
+$color_city8 : #bb3e03;
+$color_city9 : #ae2012;
+$color_city10 : #9b2226;
 
 /* Fuente iconografica */
 @font-face {
@@ -314,7 +329,10 @@ h5{ font-size: 16px;}
 	width: 100%;
 }
 #mnu_top li a{ color: $cblue_letter; }
-#mnu_top li:nth-child(1) a{ background-color: $cblue1; }
+#mnu_top li:nth-child(1) a{
+	background-color: $cblue1;
+	margin: 0;
+}
 #mnu_top li:nth-child(2) a{ background-color: $cblue2; }
 #mnu_top li:nth-child(3) a{ background-color: $cblue3; }
 #mnu_top li:nth-child(4) a{ background-color: $cblue4; }
@@ -350,7 +368,7 @@ h5{ font-size: 16px;}
 	display: flex;
 	flex-grow: 1;
 	justify-content: center;
-	padding: 10px 0px;
+	// padding: 10px 0px;
 	// padding: 10px 22px;
 	// padding: 10px 0px;
 	text-transform: uppercase;
@@ -367,9 +385,12 @@ h5{ font-size: 16px;}
 	height: 100%;
 	letter-spacing: 1px;
 	line-height: 13px;
-	padding: 15px 0px;
+	padding: 20px 0px;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
 	width: 100%;
+	@media (max-width: 1280px) {
+		padding: 15px 0px;
+ 	}
 }
 
 #mnu_main > .nav-item > .dropdown-menu a {
@@ -399,7 +420,7 @@ h5{ font-size: 16px;}
 	padding: 0;
 }
 #mnu_main>.nav-item>.dropdown-menu{
-	transform: translate(0,41px)!important;
+	transform: translate(0,53px)!important;
 	width: 100%;
 }
 #mnu_main>.nav-item>.dropdown-menu a{
@@ -436,7 +457,7 @@ h5{ font-size: 16px;}
 
 /* Participa */
 .cnt-participa{
-	background-color: $cblue7;
+	background-color: $cblue7a;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	padding: 20px 0;
 	position: relative;
@@ -574,23 +595,37 @@ h5{ font-size: 16px;}
 }
 
 .cnt_btn_lisdane{
-	padding: 0 40px;
+	align-items: center;
+	background-color: #DCE5F4;
+	color: #3366CC;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	// padding: 10px 40px;
+	padding: 10px 15px;
 	@media (max-width: 820px) {
-		padding: 0 20px;
+		flex-direction: column;
+		padding: 10px 20px;
+	}
+}
+.cnt_btn_lisdane p,
+.cnt_btn_lisdane a{
+	color: #3366CC;
+	margin: 0;
+	padding: 0;
+}
+.cnt_btn_lisdane p{
+	@media (max-width: 820px) {
+		text-align: center;
 	}
 }
 .cnt_btn_lisdane a{
-	align-items: center;
-	background-color: $cblue6;
-	// border: 1px solid blue;
-	color: #fff;
 	cursor: pointer;
-	display: flex;
-	justify-content: center;
-	margin: 20px 0;
-	padding: 10px 0;
-	width: 100%;
+	font-size: 14px;
+	text-decoration: underline;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
+
 .cnt_date_pros{
 	align-items: center;
 	display: flex;
@@ -601,11 +636,12 @@ h5{ font-size: 16px;}
 
 /*marquee*/
 .marquee {
-  height: 110px;
-  overflow: hidden;
-  // padding: 5px;
-  position: relative;
-  width: 100%;
+	display: flex;
+	height: 110px;
+	overflow: hidden;
+	// padding: 5px;
+	position: relative;
+	width: 100%;
 }
 .marquee .inner_marquee{
 	animation: animate_prices_h 1200s linear infinite;
@@ -691,3 +727,18 @@ h5{ font-size: 16px;}
 	padding: 3px 10px;
 	text-align: center;
 }
+
+.cnt_city1{ background-color: $cblue1; }
+.cnt_city2{ background-color: $cblue2; }
+.cnt_city3{ background-color: $cblue3; }
+.cnt_city4{ background-color: $cblue4; }
+.cnt_city5{ background-color: $cblue5; }
+.cnt_city6{ background-color: $cblue6; }
+.cnt_city7{ background-color: $cblue7; }
+.cnt_city8{ background-color: $cblue8; }
+.cnt_city9{ background-color: $cblue9; }
+.cnt_city10{ background-color: $cblue10; }
+
+.cnt_city1,.cnt_city2,.cnt_city3,.cnt_city4,.cnt_city5{ color: #004884; }
+.cnt_city6,.cnt_city7,.cnt_city8,.cnt_city9,.cnt_city10{ color: #fff; }
+.barra-accesibilidad-govco{display: none!important;}

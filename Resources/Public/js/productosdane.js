@@ -6,8 +6,9 @@ document.addEventListener("DOMContentLoaded", function()
 	let path_xml = "https://pruebasse.minagricultura.gov.co/typo3conf/ext/madrtemplate/Resources/Public/xml/productos.xml";
 	// let path_prods = "http://localhost/madr_pruebasse/public/typo3conf/ext/madrtemplate/Resources/Public/images/prods/";
 	let path_prods = "https://pruebasse.minagricultura.gov.co/typo3conf/ext/madrtemplate/Resources/Public/images/prods/";
+	let url_lista = "https://pruebasse.minagricultura.gov.co/precios-dane";
 
-	// Load Precios contenedor
+	// Load Lista Precios contenedor
 	var cnt_products_dane = document.getElementById("cnt_products_dane");
 	let str_result_pros = "";
 	let arr_result_dane = [];
@@ -110,32 +111,15 @@ document.addEventListener("DOMContentLoaded", function()
 					}
 					cnt_products_dane.appendChild(btn_pros_all);
 
-					// add header
-
-
-					// title
-					const str_header = document.createElement("h2");
-					str_header.innerText = "Precio promedio de los productos en las principales ciudades de Colombia";
-					str_header.style.textAlign = "center";
-					// pretitle
-					const str_header_pre = document.createElement("p");
-					str_header_pre.innerText = "(Precio por kilogramo - dado en pesos colombianos)";
-					str_header_pre.style.textAlign = "center";
-
-					// date
-					const str_date_pros = document.createElement("div");
+					// add date
 					date_pros = date_pros.slice(0, 10);
-					str_date_pros.classList.add("cnt_date_pros");
-					str_date_pros.innerText = "Tomado del DANE "+date_pros;
-
-					//
-					cnt_products_dane.prepend(str_date_pros);
-					cnt_products_dane.prepend(str_header_pre);
-					cnt_products_dane.prepend(str_header);
+					if(date_pros!="")
+					{
+						load_date_dane(" - DANE " + date_pros);
+					}
 				}
 			})
 		.catch( console.error );
-
 
 		// Event Precios
 		/*global $, console*/
@@ -193,17 +177,7 @@ document.addEventListener("DOMContentLoaded", function()
 				controlsSlider(-10);
 			}
 		};
-
-
-
-
-
-
-
-
-
 	}
-
 
 	// Load Ticker Precios
 	var cnt_products_dane_marquee = document.getElementById("cnt_products_dane_marquee");
@@ -259,9 +233,16 @@ document.addEventListener("DOMContentLoaded", function()
 
 				// build container
 				let str_city2 = "";
+				let cnt_city = 0;
 				// loop cities
 				uniqueCity2.forEach(item => {
 					let cnt2 = 0;
+					cnt_city++;
+					if(cnt_city==11)
+					{
+						cnt_city=1;
+					}
+
 					// loop each product in city
 					arr_result_dane2.forEach(item_p => {
 						cnt2++;
@@ -286,7 +267,7 @@ document.addEventListener("DOMContentLoaded", function()
 							str_city2 += "		<div class='item_marquee_price'>";
 							str_city2 += "			$ "+item_p["precioPromedio"];
 							str_city2 += "		</div>";
-							str_city2 += "		<div class='item_marquee_city'>";
+							str_city2 += "		<div class='item_marquee_city cnt_city"+cnt_city+"'>";
 							str_city2 += 			item_p["ciudad"];
 							str_city2 += "		</div>";
 							str_city2 += "	</div>";
@@ -296,19 +277,15 @@ document.addEventListener("DOMContentLoaded", function()
 				});
 
 				// str_result_pros2 = "<div class='inner_marquee' id='inner_marquee'><div class='round_marquee'>"+str_city2+"</div></div>";
-				str_result_pros2 = "<div class='marquee'><div class='inner_marquee' id='inner_marquee'><div class='round_marquee'>"+str_city2+"</div><div class='round_marquee'>"+str_city2+"</div></div></div>";
+				str_result_pros2 = "<a href='"+url_lista+"' class='marquee'><div class='inner_marquee' id='inner_marquee'><div class='round_marquee'>"+str_city2+"</div><div class='round_marquee'>"+str_city2+"</div></div></a>";
 
-				// add header
-				// title
-				let str_header = "<h2 style='text-align:center;'>Precio promedio de los productos en las principales ciudades de Colombia</h2>";
-				// pretitle
-				let str_header_pre = "<p style='text-align:center;'>(Precio por kilogramo - dado en pesos colombianos)</p>";
-				// date
+				// add date
 				date_pros2 = date_pros2.slice(0, 10);
-				let str_date_pros = "<div class='cnt_date_pros'>Tomado del DANE "+date_pros2+"</div>";
-				// add title
-				// add content
-				cnt_products_dane_marquee.innerHTML = str_header+str_header_pre+str_date_pros+str_result_pros2;
+				if(date_pros2!="")
+				{
+					load_date_dane(" - DANE " + date_pros2);
+				}
+				cnt_products_dane_marquee.innerHTML = str_result_pros2;
 				// cnt_products_dane_marquee.innerHTML = str_result_pros2;
 
 				//4. se establece la altura del contenedor
@@ -334,32 +311,19 @@ document.addEventListener("DOMContentLoaded", function()
 					css_anima.innerHTML = css;
 					head.appendChild(css_anima);
 				}
-
-				// if (document.querySelector('.cnt_pros')) {
-				// 	const cnt_pros = document.querySelector('.cnt_pros');
-				// 	cnt_pros.innerHTML = str_result_pros;
-
-					// add button more
-					// const btn_pros_all = document.createElement("div");
-					// btn_pros_all.innerText = "Más";
-					// btn_pros_all.classList.add("btn_pros_all");
-					// btn_pros_all.onclick = function() {
-					// 	var cnt_pros = document.getElementById("cnt_pros");
-					// 	if(cnt_pros.classList.contains("full"))
-					// 	{
-					// 		btn_pros_all.innerText = "Más";
-					// 	   cnt_pros.classList.remove("full");
-					// 	}
-					// 	else{
-					// 	   cnt_pros.classList.add("full");
-					// 		btn_pros_all.innerText = "Menos";
-					// 	}
-					// }
-					// cnt_products_dane.appendChild(btn_pros_all);
-
-
-				// }
 			})
 		.catch( console.error );
 	}
 });
+
+
+function load_date_dane(date_dane)
+{
+	var cnt_btn_lisdane = document.querySelectorAll(".cnt_btn_lisdane");
+   cnt_btn_lisdane.forEach((item,index,array) => {
+		item_p = item.querySelector("p:not(:empty)");
+		item_p.innerHTML += date_dane;
+      console.log(item_p);
+   });
+
+}
